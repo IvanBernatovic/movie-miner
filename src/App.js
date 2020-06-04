@@ -1,10 +1,15 @@
 import React from "react"
 import Layout from "./components/Layout"
+import MovieList from "./containers/MovieList"
 
-export default function App() {
+function App() {
   return (
     <div>
-      <Layout />
+      <Layout>
+        <MovieList className="p-8" />
+      </Layout>
     </div>
   )
 }
+
+export default App

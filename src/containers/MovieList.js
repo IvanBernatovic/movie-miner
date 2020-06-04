@@ -12,8 +12,6 @@ const MovieList = (props) => {
       },
     })
 
-    console.log(response)
-
     setData((prevState) => {
       return {
         ...data,

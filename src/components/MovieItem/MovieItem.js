@@ -8,7 +8,7 @@ const MovieItem = (props) => {
         <div className="h-full">
           <img
             src={"https://image.tmdb.org/t/p/w200" + props.movie.poster_path}
-            alt={"Poster for movie " + props.movie.tile}
+            alt={"Poster for movie " + props.movie.title}
             className="w-full h-full"
           />
         </div>

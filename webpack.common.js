@@ -3,12 +3,6 @@ const path = require("path")
 const Dotenv = require("dotenv-webpack")
 
 module.exports = {
-  devServer: {
-    open: true,
-    contentBase: path.join(__dirname, "dist"),
-    stats: "minimal",
-    hot: true,
-  },
   context: __dirname,
   entry: {
     app: "./src/index.js",

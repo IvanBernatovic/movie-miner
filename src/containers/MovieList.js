@@ -29,19 +29,21 @@ const MovieList = (props) => {
   }, [])
 
   return (
-    <div className="text-center">
-      <div className={"flex flex-wrap " + props.className}>
+    <div>
+      <div className={"flex flex-wrap items-start " + props.className}>
         {data.movies.map((movie) => (
           <MovieItem movie={movie} key={"movie-" + movie.id} />
         ))}
       </div>
 
-      <button
-        onClick={fetchMovies}
-        className="transition-colors duration-150 bg-red-700 py-3 px-4 text-white rounded shadow mx-auto hover:bg-red-600"
-      >
-        Load more
-      </button>
+      <div className="text-center">
+        <button
+          onClick={fetchMovies}
+          className="transition-colors duration-150 bg-red-700 py-3 px-4 text-white rounded shadow mx-auto hover:bg-red-600"
+        >
+          Load more
+        </button>
+      </div>
     </div>
   )
 }

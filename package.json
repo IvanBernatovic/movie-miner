@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "webpack-dev-server --config webpack.dev.js",
     "build": "NODE_ENV=production webpack -p --config webpack.prod.js",
-    "start": "ws --directory dist --spa index.html -z",
+    "start": "ws --directory dist --spa index.html -z --http2 -p 8080",
     "analyze": "NODE_ENV=production webpack -p --config webpack.prod.js --profile --json > ./dist/stats.json && webpack-bundle-analyzer ./dist/stats.json"
   },
   "author": "",

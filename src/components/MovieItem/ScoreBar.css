@@ -1,0 +1,17 @@
+.score-bar {
+  @apply mt-1 w-full flex justify-between;
+
+  & .bar {
+    @apply border border-black flex-grow;
+
+    margin-right: 2px;
+    padding: 3px;
+  }
+}
+
+.score-bar-fill {
+  @apply absolute;
+
+  height: 6px;
+  bottom: 1px;
+}

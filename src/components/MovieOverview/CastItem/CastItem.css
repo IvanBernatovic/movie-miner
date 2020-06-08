@@ -1,0 +1,11 @@
+$castItemWIdth: 90px;
+
+.cast-item {
+    width: $castItemWIdth;
+    max-width: $castItemWIdth;
+
+    & img {
+        @apply object-cover shadow mb-4;
+        height: calc($castItemWIdth * 1.5);
+    }
+}

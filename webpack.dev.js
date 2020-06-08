@@ -9,6 +9,7 @@ module.exports = merge(common, {
     contentBase: path.join(__dirname, "dist"),
     stats: "minimal",
     hot: true,
+    historyApiFallback: true
   },
   devtool: "inline-source-map",
 })

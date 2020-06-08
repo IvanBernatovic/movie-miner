@@ -2,7 +2,7 @@
   @apply mt-1 w-full flex justify-between;
 
   & .bar {
-    @apply border border-black flex-grow;
+    @apply border border-black flex-grow rounded;
 
     margin-right: 2px;
     padding: 3px;

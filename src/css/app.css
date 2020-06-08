@@ -1,0 +1,18 @@
+body {
+  @apply bg-gray-300;
+  font-family: "Inter", sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  @apply font-bold;
+}
+
+.font-inter {
+  font-family: "Inter", sans-serif;
+}
+
+.font-lato {
+  font-family: "Lato", sans-serif;
+}

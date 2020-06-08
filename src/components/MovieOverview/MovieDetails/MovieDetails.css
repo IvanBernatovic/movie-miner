@@ -1,0 +1,19 @@
+.movie-details-wrapper {
+  @apply p-6 bg-white;
+  min-width: 100%;
+
+  @media (min-width: 768px) {
+      min-width: 33.33%;
+      width: 33.33%;
+}
+
+  @media (min-width: 1024px) {
+      min-width: 25%;
+      width: 25%;
+}
+
+  @media (min-width: 1280px) {
+      min-width: 20%;
+      width: 20%;
+}
+}

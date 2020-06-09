@@ -9,12 +9,10 @@ const CastItem = ({ castMember }) => {
   }
 
   return (
-    <div className="mr-6 mb-2 flex-grow cast-item">
+    <div className="mr-6 mb-2 flex-grow cast-item text-center">
       <img src={profilePath()} alt={"Picture of " + castMember.name} />
 
-      <span className="text-sm text-gray-700 text-center inline-block font-lato">
-        {castMember.name}
-      </span>
+      <span className="text-sm text-gray-700 inline-block font-lato">{castMember.name}</span>
     </div>
   )
 }

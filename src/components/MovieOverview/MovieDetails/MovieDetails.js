@@ -34,7 +34,7 @@ const MovieDetails = ({ movie }) => {
         <img
           src={"https://image.tmdb.org/t/p/w342/" + movie.poster_path}
           alt={"Poster for movie " + movie.title}
-          className="shadow-xl w-3/5 m-auto rounded-lg"
+          className="shadow-xl lg:w-4/5 xl:w-3/5 m-auto rounded-lg"
         />
       </div>
 

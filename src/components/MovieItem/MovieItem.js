@@ -1,7 +1,6 @@
 import React from "react"
 import { Link } from "react-router-dom"
 import "./MovieItem.css"
-import ScoreBar from "./ScoreBar"
 
 const MovieItem = (props) => {
   const year = () => {
@@ -21,9 +20,16 @@ const MovieItem = (props) => {
         />
       </div>
 
-      <ScoreBar score={props.movie.vote_average} />
+      {/* <ScoreBar score={props.movie.vote_average} /> */}
 
-      <h1 className="mt-2 font-bold text-center">
+      <div
+        className="relative text-sm font-semibold text-gray-300 py-1 px-2 bg-gray-900 rounded-full text-white flex items-center justify-center"
+        style={{ bottom: "22px", left: "45px", width: "2.4em", height: "2.4em" }}
+      >
+        <span>{props.movie.vote_average}</span>
+      </div>
+
+      <h1 className="font-medium text-center text-sm relative" style={{ bottom: "15px" }}>
         <Link
           to={"/movies/" + props.movie.id}
           className="transition-colors duration-150 hover:text-blue-500"

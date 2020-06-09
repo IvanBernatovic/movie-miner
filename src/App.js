@@ -1,7 +1,7 @@
 import React from "react"
-import { Route, Switch } from "react-router-dom"
+import { Route, Switch, withRouter } from "react-router-dom"
 import Layout from "./components/Layout"
-import MovieList from "./containers/MovieList"
+import Movies from "./containers/Movies"
 import Movie from "./containers/Movie"
 
 function App() {
@@ -9,7 +9,7 @@ function App() {
     <Layout>
       <Switch>
         <Route path="/" exact>
-          <MovieList className="p-8" />
+          <Movies className="p-8" />
         </Route>
 
         <Route path="/movies/:id">
@@ -20,4 +20,4 @@ function App() {
   )
 }
 
-export default App
+export default withRouter(App)

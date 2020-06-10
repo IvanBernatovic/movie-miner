@@ -1,21 +1,24 @@
-import React from "react"
+import React, { Suspense, lazy } from "react"
 import { Route, Switch, withRouter } from "react-router-dom"
 import Layout from "./components/Layout"
-import Movies from "./containers/Movies"
-import Movie from "./containers/Movie"
+
+const Movies = lazy(() => import("./containers/Movies"))
+const Movie = lazy(() => import("./containers/Movie"))
 
 function App() {
   return (
     <Layout>
-      <Switch>
-        <Route path="/" exact>
-          <Movies className="p-8" />
-        </Route>
+      <Suspense fallback={<div className="text-3xl">Loading</div>}>
+        <Switch>
+          <Route path="/" exact>
+            <Movies className="p-8" />
+          </Route>
 
-        <Route path="/movies/:id">
-          <Movie />
-        </Route>
-      </Switch>
+          <Route path="/movies/:id">
+            <Movie />
+          </Route>
+        </Switch>
+      </Suspense>
     </Layout>
   )
 }

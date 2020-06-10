@@ -4,7 +4,6 @@ import { BrowserRouter } from "react-router-dom"
 import App from "./App"
 import "./css/tailwind.css"
 import "./css/app.css"
-import getTmdbGuestSessionToken from "./tmdb-session"
 
 const app = (
   <BrowserRouter>
@@ -13,5 +12,3 @@ const app = (
 )
 
 ReactDOM.render(app, document.getElementById("root"))
-
-getTmdbGuestSessionToken()

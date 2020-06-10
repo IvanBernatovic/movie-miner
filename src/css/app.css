@@ -16,3 +16,32 @@ h3 {
 .font-lato {
   font-family: "Lato", sans-serif;
 }
+
+.shuffle-button {
+  @apply fixed transition-colors duration-100 bg-red-700 rounded-full text-white flex items-center justify-center cursor-pointer;
+
+  width: 80px;
+  height: 80px;
+  bottom: 10%;
+  right: 15%;
+
+  &:hover {
+    @apply bg-red-600;
+  }
+}
+
+.btn {
+  @apply transition-colors duration-150 py-3 px-4 rounded shadow mx-auto;
+
+  &:hover {
+    @apply bg-red-600;
+  }
+
+  &.btn-brand {
+    @apply bg-red-700 text-white;
+    
+    &:hover {
+      @apply bg-red-600;
+    }
+  }
+}

@@ -1,0 +1,43 @@
+.modal-overlay {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  padding: 1rem;
+  z-index: 9999;
+  opacity: 1;
+  position: fixed;
+  animation: show 0.5s ease;
+  overflow-x: hidden;
+  overflow-y: auto;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-header {
+  @apply flex justify-between items-baseline;
+}
+
+.close-modal {
+  @apply cursor-pointer text-2xl font-bold p-4 transition-colors duration-100;
+
+  &:hover {
+    @apply text-blue-500;
+  }
+}
+
+.modal-body {
+  @apply bg-white rounded p-6 w-full;
+  max-height: calc(100vh - 160px);
+  overflow-y: auto;
+
+  @media (min-width: 768px) {
+      @apply w-2/3;
+  }
+
+  @media (min-width: 1280px) {
+      @apply w-1/2;
+  }
+}

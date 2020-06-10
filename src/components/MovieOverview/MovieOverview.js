@@ -24,7 +24,7 @@ const MovieOverview = ({ movie, rating, movieRated }) => {
               <div className="mt-4">
                 <h2 className="text-lg font-semibold">Reviews</h2>
                 <div className="mb-6 md:flex flex-wrap">
-                  {movie.reviews.results.splice(0, 2).map((review) => (
+                  {movie.reviews.results.slice(0, 2).map((review) => (
                     <div key={"review-" + review.id} className="mb-5 md:w-1/2 pr-4">
                       <h3 className="font-semibold">{review.author}</h3>
                       <p className="font-lato whitespace-pre-wrap ">{review.content}</p>

@@ -21,10 +21,7 @@ const MovieList = ({ movies, className, loadMore }) => {
 
       {loadMore && (
         <div className="text-center">
-          <button
-            onClick={loadMore}
-            className="transition-colors duration-150 bg-red-700 py-3 px-4 text-white rounded shadow mx-auto hover:bg-red-600"
-          >
+          <button onClick={loadMore} className="btn btn-brand">
             Load more
           </button>
         </div>

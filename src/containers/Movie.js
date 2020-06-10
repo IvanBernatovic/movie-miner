@@ -40,7 +40,8 @@ const Movie = () => {
     }
 
     fetchMovie()
-  }, [id])
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
 
   const rateMovie = (score) => {
     axios

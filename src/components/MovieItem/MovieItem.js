@@ -20,8 +20,6 @@ const MovieItem = (props) => {
         />
       </div>
 
-      {/* <ScoreBar score={props.movie.vote_average} /> */}
-
       <div
         className="relative text-sm font-semibold text-gray-300 py-1 px-2 bg-gray-900 rounded-full text-white flex items-center justify-center"
         style={{ bottom: "22px", left: "45px", width: "2.4em", height: "2.4em" }}
@@ -29,14 +27,19 @@ const MovieItem = (props) => {
         <span>{props.movie.vote_average}</span>
       </div>
 
-      <h1 className="font-medium text-center text-sm relative" style={{ bottom: "15px" }}>
-        <Link
-          to={"/movies/" + props.movie.id}
-          className="transition-colors duration-150 hover:text-blue-500"
-        >
-          {props.movie.title} ({year()})
-        </Link>
-      </h1>
+      <div className="relative" style={{ bottom: "15px" }}>
+        <h1 className="font-medium text-center text-sm">
+          <Link
+            to={"/movies/" + props.movie.id}
+            className="transition-colors duration-150 hover:text-blue-500"
+          >
+            {props.movie.title} ({year()}){" "}
+            <span className="text-xs bg-gray-800 text-gray-300 rounded p-1 uppercase">
+              {props.movie.original_language}
+            </span>
+          </Link>
+        </h1>
+      </div>
     </div>
   )
 }

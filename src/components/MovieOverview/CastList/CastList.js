@@ -19,7 +19,7 @@ const CastList = ({ cast }) => {
       </div>
 
       <div className="text-center">
-        <button onClick={displayMore} className="px-3 py-2 bg-red-700 text-white rounded">
+        <button onClick={displayMore} className="btn btn-brand">
           Show more
         </button>
       </div>

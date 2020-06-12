@@ -1,0 +1,14 @@
+{
+  "name": "Movie Miner - TMDB React client",
+  "short_name": "Movie Miner",
+  "theme_color": "#c53030",
+  "background_color": "#c53030",
+  "display": "standalone",
+  "orientation": "portrait",
+  "scope": "/",
+  "start_url": "/",
+  "icons": [
+    { "src": "/android-chrome-192x192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/android-chrome-512x512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}

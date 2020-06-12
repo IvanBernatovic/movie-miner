@@ -1,6 +1,8 @@
 const HtmlWebPackPlugin = require("html-webpack-plugin")
 const path = require("path")
 const Dotenv = require("dotenv-webpack")
+const webpack = require("webpack")
+const WebpackCleanupPlugin = require("webpack-cleanup-plugin")
 
 module.exports = {
   context: __dirname,
@@ -9,7 +11,7 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, "dist"),
-    filename: "main.js",
+    filename: "[name].[contenthash].js",
     publicPath: "/",
   },
   module: {
@@ -54,7 +56,14 @@ module.exports = {
     new HtmlWebPackPlugin({
       template: path.resolve(__dirname, "src/index.html"),
       filename: "index.html",
+      environment: process.env.NODE_ENV,
     }),
     new Dotenv(),
+    new webpack.DefinePlugin({
+      "process.env.NODE_ENV": JSON.stringify(process.env.NODE_ENV),
+    }),
+    new WebpackCleanupPlugin({
+      exclude: ["*.txt", "*.png", "*.ico", "*.txt", "site.webmanifest", ".gitignore"],
+    }),
   ],
 }

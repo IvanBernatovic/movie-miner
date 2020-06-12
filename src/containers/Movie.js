@@ -9,7 +9,7 @@ const Movie = () => {
   const [movie, setMovie] = useState({})
   const [rating, setRating] = useState([])
 
-  useEffect(() => {
+  const fetchMovieAndCheckRatings = () => {
     const yourRating = (_ratings, movie) => {
       const ratedMovie = _ratings.find((_movie) => _movie.id === movie.id)
       if (ratedMovie) {
@@ -19,8 +19,8 @@ const Movie = () => {
       return null
     }
 
-    function fetchMovie() {
-      const guestSession = getTmdbGuestSessionToken()
+    async function fetchMovie() {
+      const guestSession = await getTmdbGuestSessionToken()
 
       Promise.all([
         axios.get("/movie/" + id, {
@@ -40,17 +40,22 @@ const Movie = () => {
     }
 
     fetchMovie()
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [])
+  }
 
-  const rateMovie = (score) => {
+  useEffect(() => {
+    window.scrollTo(0, 0)
+    fetchMovieAndCheckRatings()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [id])
+
+  const rateMovie = async (score) => {
     axios
       .post(
         `/movie/${movie.id}/rating`,
         { value: score },
         {
           params: {
-            guest_session_id: getTmdbGuestSessionToken(),
+            guest_session_id: await getTmdbGuestSessionToken(),
           },
         }
       )

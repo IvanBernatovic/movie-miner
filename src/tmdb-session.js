@@ -44,12 +44,12 @@ const createToken = async () => {
   }
 }
 
-const getTmdbGuestSessionToken = () => {
+const getTmdbGuestSessionToken = async () => {
   if (isValidToken()) {
     return getToken()
   }
 
-  createToken()
+  await createToken()
 
   return getToken()
 }

@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "webpack-dev-server --config webpack.dev.js",
     "build": "NODE_ENV=production webpack -p --config webpack.prod.js",
-    "start": "ws --directory dist --spa index.html -z --http2 -p 8080",
+    "start": "ws --directory dist --spa index.html -z -p 8080",
     "analyze": "NODE_ENV=production webpack -p --config webpack.prod.js --profile --json > ./dist/stats.json && webpack-bundle-analyzer ./dist/stats.json"
   },
   "author": "",
@@ -60,8 +60,10 @@
     "style-loader": "^1.2.1",
     "webpack": "^4.43.0",
     "webpack-bundle-analyzer": "^3.8.0",
+    "webpack-cleanup-plugin": "^0.5.1",
     "webpack-cli": "^3.3.11",
     "webpack-dev-server": "^3.11.0",
-    "webpack-merge": "^4.2.2"
+    "webpack-merge": "^4.2.2",
+    "workbox-webpack-plugin": "^5.1.3"
   }
 }

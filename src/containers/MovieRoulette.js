@@ -105,7 +105,7 @@ const MovieRoulette = ({ genres, fetchGenres }) => {
         </div>
       </Modal>
 
-      <div className="shuffle-button" onClick={handleOpenModal}>
+      <div className="shuffle-button shadow-lg" onClick={handleOpenModal}>
         <svg
           className="w-1/3"
           aria-hidden="true"

@@ -63,7 +63,8 @@ module.exports = {
       "process.env.NODE_ENV": JSON.stringify(process.env.NODE_ENV),
     }),
     new WebpackCleanupPlugin({
-      exclude: ["*.txt", "*.png", "*.ico", "*.txt", "site.webmanifest", ".gitignore"],
+      exclude: ["*.txt", "*.png", "*.ico", "*.txt", "site.webmanifest", ".gitignore", "stats.json"],
+      quiet: true,
     }),
   ],
 }

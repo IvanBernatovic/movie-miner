@@ -1,6 +1,10 @@
 .movie-item {
-  width: 120px;
   @apply mr-2 mb-3 flex flex-col items-center justify-center;
+  width: 120px;
+
+  @media (min-width: 350px) {
+      width: 150px;
+  }
 
   @media (min-width: 768px) {
       width: 170px;

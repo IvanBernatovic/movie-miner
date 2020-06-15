@@ -44,7 +44,7 @@ const MovieOverview = ({ movie, rating, movieRated }) => {
 
             <MovieList
               movies={movie.recommendations.results}
-              className="flex flex-wrap items-start xl:flex-col xl:justiy-center xl:items-center"
+              className="flex flex-wrap items-start justify-between sm:justify-start xl:flex-col xl:justiy-center xl:items-center"
             />
           </div>
         </div>

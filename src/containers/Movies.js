@@ -46,7 +46,11 @@ const Movies = (props) => {
 
   return (
     <div className="p-6">
-      <MovieList movies={data.movies} loadMore={fetchMovies} />
+      <MovieList
+        movies={data.movies}
+        loadMore={fetchMovies}
+        className="flex flex-wrap items-start justify-between md:justify-start"
+      />
 
       <MovieRoulette genres={data.genres} fetchGenres={fetchGenres} />
     </div>
